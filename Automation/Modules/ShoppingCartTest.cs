@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Automation.Modules
+namespace ShoppingCart
 {
     [TestClass]
     public class ShoppingCartTest
