@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Automation
+namespace Automation.Modules
 {
     [TestClass]
-    public class UnitTest1
+    public class ShoppingCartTest
     {
         [TestMethod]
         public void TestMethod1()
