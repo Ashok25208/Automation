@@ -35,6 +35,9 @@ namespace OrdersPageObjects
         [FindsBy(How = How.XPath, Using = "stagedOrderGrid")]
         [CacheLookup]
         public IWebElement CatalogItemOne;
+        [FindsBy(How = How.XPath, Using = "//input[@id='inputQty0']")]
+        [CacheLookup]
+        public IWebElement InputQty0;
         [FindsBy(How = How.XPath, Using = "//div[@id='addToCart0']//button[@type='button'][contains(text(),'Add to Cart')]")]
         [CacheLookup]
         public IWebElement AddCartOne;

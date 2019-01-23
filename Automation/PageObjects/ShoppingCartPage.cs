@@ -14,8 +14,13 @@ namespace ShoppingCartPageObjects
         public IWebElement ContinueOption;
         [FindsBy(How = How.XPath, Using = "//div[@id='shopCart1']//div[3]//div[2]//button[1]")]
         [CacheLookup]
-        public IWebElement DeleteShoppingCartOption;
-
+        public IWebElement MultipleDeleteShoppingCartOption;
+        [FindsBy(How = How.XPath, Using = "//div[@id='shopCart1']//div[3]//div[2]//button[2]")]
+        [CacheLookup]
+        public IWebElement MultipleClearShoppingCartoption;
+        [FindsBy(How = How.XPath, Using = "//img[@src='https://qachecknet.checkpt.com/Images/icon_trash.png']")]
+        [CacheLookup]
+        public IWebElement TrashIcon;
 
 
         [TestMethod]

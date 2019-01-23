@@ -9,7 +9,7 @@ namespace LoginPageObjects
     [TestClass]
     public class LoginPage
     {
-        public IWebDriver driver;
+        private IWebDriver driver;
         [FindsBy(How = How.XPath, Using = "//input[@id='txtUsername']")]
         [CacheLookup]
         public IWebElement UserName { get; set; }
@@ -23,8 +23,14 @@ namespace LoginPageObjects
         [TestMethod]
         public void Login()
         {
-           
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);
 
-    }
+            UserName.SendKeys("rjurbansc");
+            PassWord.SendKeys("welcome1");
+            LoginButton.Submit();
+
+
+        }
     }
 }
