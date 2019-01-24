@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using LoginTestModule;
 
 namespace Automation
 {
@@ -7,8 +8,10 @@ namespace Automation
     public class TestBase
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Execution()
         {
+            LoginTest Execute = new LoginTest();
+            Execute.Login();
         }
     }
 }
