@@ -108,7 +108,9 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Configuration\Environment.config" />
+    <None Include="Configuration\Environment.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
