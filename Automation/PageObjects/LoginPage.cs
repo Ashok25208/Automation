@@ -30,7 +30,7 @@ namespace LoginPageObjects
         {
             UserName.SendKeys("rjurbansc");
             PassWord.SendKeys("welcome1");
-            LoginButton.Submit();
+            LoginButton.Click();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
         }
     }
