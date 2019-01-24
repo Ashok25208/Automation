@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation", "Automation\Automation.csproj", "{7A3B4975-CAEC-4C62-915C-A0F2B3116290}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Executable", "Executable\Executable.csproj", "{753518C0-028E-4512-BBAB-D2CFBB681CDE}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7A3B4975-CAEC-4C62-915C-A0F2B3116290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A3B4975-CAEC-4C62-915C-A0F2B3116290}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A3B4975-CAEC-4C62-915C-A0F2B3116290}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A3B4975-CAEC-4C62-915C-A0F2B3116290}.Release|Any CPU.Build.0 = Release|Any CPU
 		{753518C0-028E-4512-BBAB-D2CFBB681CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{753518C0-028E-4512-BBAB-D2CFBB681CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{753518C0-028E-4512-BBAB-D2CFBB681CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
