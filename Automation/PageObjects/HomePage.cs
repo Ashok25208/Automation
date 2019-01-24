@@ -20,9 +20,11 @@ namespace HomePageObjects
         [CacheLookup]
         public IWebElement OrdersOption;
 
-        [TestMethod]
-        public void TestMethod1()
+        public HomePage(IWebDriver driver)
         {
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);
         }
+
     }
 }

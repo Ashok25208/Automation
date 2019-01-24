@@ -20,17 +20,18 @@ namespace LoginPageObjects
         [CacheLookup]
         public IWebElement LoginButton { get; set; }
 
-        [TestMethod]
-        public void Login()
+        
+        public  LoginPage(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);
-
+        }
+        public void LoginToApp()
+        {
             UserName.SendKeys("rjurbansc");
             PassWord.SendKeys("welcome1");
             LoginButton.Submit();
-
-
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
         }
     }
 }

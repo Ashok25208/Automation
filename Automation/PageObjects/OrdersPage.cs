@@ -10,7 +10,7 @@ namespace OrdersPageObjects
     [TestClass]
     public class OrdersPage
     {
-        public IWebDriver driver = new ChromeDriver();
+        private IWebDriver driver; 
         [FindsBy(How = How.XPath, Using = "//a[@href='/Redesign/'][contains(text(),'Orders')]")]
         [CacheLookup]
         public IWebElement OrdersTab;
@@ -42,11 +42,16 @@ namespace OrdersPageObjects
         [CacheLookup]
         public IWebElement AddCartOne;
 
-        [TestMethod]
-        public void CatalogOrder()
+        
+        public OrdersPage(IWebDriver driver)
+        {
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);  
+        }
+
+        public void CatalogOrderAddToCart()
         {
 
-            
         }
     }
 }

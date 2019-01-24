@@ -1,69 +1,27 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using System.Configuration;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
+using LoginPageObjects;
 
-namespace Automation.Modules
+namespace LoginTestModule
 {
-    /// <summary>
-    /// Summary description for LoginTest
-    /// </summary>
-    [TestClass]
+    
+    [TestFixture]
     public class LoginTest
     {
-        public LoginTest()
+       [Test]
+        public void Login()
         {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
+            IWebDriver driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+            driver.Url = ConfigurationManager.AppSettings["DEV"];
+            var loginPage = new LoginPage(driver);
+            loginPage.LoginToApp();
 
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        #region Additional test attributes
-        //
-        // You can use the following additional attributes as you write your tests:
-        //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup to run code after each test has run
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
-
-        [TestMethod]
-        public void TestMethod1()
-        {
-            //
-            // TODO: Add test logic here
-            //
         }
     }
 }
