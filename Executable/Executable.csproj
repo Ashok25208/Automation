@@ -94,22 +94,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modules\LoginTest.cs" />
-    <Compile Include="Modules\OrdersTest.cs" />
-    <Compile Include="Modules\ShoppingCartTest.cs" />
-    <Compile Include="PageObjects\HomePage.cs" />
-    <Compile Include="PageObjects\LoginPage.cs" />
-    <Compile Include="PageObjects\OrdersPage.cs" />
-    <Compile Include="PageObjects\ShoppingCartPage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Configuration\Environment.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
