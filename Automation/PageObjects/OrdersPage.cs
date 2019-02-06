@@ -32,15 +32,11 @@ namespace OrdersPageObjects
         [FindsBy(How = How.XPath, Using = "//button[@id='btnSearchClear']")]
         [CacheLookup]
         public IWebElement ClearSearchOption;
-        [FindsBy(How = How.XPath, Using = "stagedOrderGrid")]
+        [FindsBy(How = How.XPath, Using = "//button[contains(text(),'Add to Cart')]")]
         [CacheLookup]
-        public IWebElement CatalogItemOne;
-        [FindsBy(How = How.XPath, Using = "//input[@id='inputQty0']")]
-        [CacheLookup]
-        public IWebElement InputQty0;
-        [FindsBy(How = How.XPath, Using = "//div[@id='addToCart0']//button[@type='button'][contains(text(),'Add to Cart')]")]
-        [CacheLookup]
-        public IWebElement AddCartOne;
+        public IWebElement AddCatalogItemToCart;
+        
+       
 
         
         public OrdersPage(IWebDriver driver)
@@ -51,6 +47,9 @@ namespace OrdersPageObjects
 
         public void CatalogOrderAddToCart()
         {
+            ItemCodeField.SendKeys("");
+            SearchOption.Click();
+
 
         }
     }
