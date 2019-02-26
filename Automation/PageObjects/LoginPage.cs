@@ -37,6 +37,12 @@ namespace LoginPageObjects
         [FindsBy(How = How.XPath, Using = "rj ( Logged in as rjurbansc )")]
         [CacheLookup]
         public IWebElement LoggedUser;
+        [FindsBy(How = How.XPath, Using = "//div[@id='profileModal']")]
+        [CacheLookup]
+        public IWebElement ProfileModal;
+        [FindsBy(How = How.XPath, Using = "//div[@id='profileModal']//button[@class='btn'][contains(text(),'Cancel')]")]
+        [CacheLookup]
+        public IWebElement ProfileModalCancelOption;
 
         
         public  LoginPage(IWebDriver driver)
@@ -46,10 +52,15 @@ namespace LoginPageObjects
         }
         public void LoginToApp()
         {
-            UserName.SendKeys("rjurbansc");
+            UserName.SendKeys("yuva_hm_qa");
             PassWord.SendKeys("welcome1");
-            LoginButton.Submit();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            LoginButton.Click();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            if(ProfileModal.Displayed)
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+                ProfileModalCancelOption.Click();
+            }
         }
     }
 }
