@@ -118,11 +118,8 @@
     <Compile Include="Modules\OrdersTest.cs" />
     <Compile Include="Modules\ShoppingCartTest.cs" />
     <Compile Include="PageObjects\HomePageClass.cs" />
-    <Compile Include="PageObjects\LoginPage.cs" />
     <Compile Include="PageObjects\LoginPageClass.cs" />
     <Compile Include="PageObjects\OrderPageClass.cs" />
-    <Compile Include="PageObjects\OrdersPage.cs" />
-    <Compile Include="PageObjects\ShoppingCartPage.cs" />
     <Compile Include="PageObjects\ShoppingCartPageClass.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
