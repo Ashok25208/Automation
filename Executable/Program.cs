@@ -13,8 +13,8 @@ namespace Executable
         static void Main(string[] args)
         {
             LoginTest Exe = new LoginTest();
-            OrdersPage Op = new OrdersPage();
             Exe.Login();
+            OrdersPage Op = new OrdersPage();
             Op.CatalogOrderAddToCart();
 
         }

@@ -10,11 +10,11 @@ using LoginPageObjects;
 
 namespace LoginTestModule
 {
-    
+
     [TestFixture]
     public class LoginTest
     {
-       [Test]
+        [Test]
         public void Login()
         {
             IWebDriver driver = new ChromeDriver();
