@@ -42,7 +42,7 @@ namespace OrdersPageObjects
         [FindsBy(How = How.XPath, Using = "/html[1]/body[1]/div[8]/div[2]/button[1]")]
         [CacheLookup]
         public IWebElement SaveOptioninMOE;
-
+        
 
         public OrdersPage(IWebDriver driver)
         {
@@ -51,10 +51,17 @@ namespace OrdersPageObjects
 
         }
 
-        public OrdersPage()
+        public void CatalogorderPage()
         {
+            Actions builder = new Actions(driver);
+            IAction MouseOver = builder
+                .MoveToElement(OrdersTab)
+                .MoveToElement(CatalogOrderOption)
+                .Build();
+            MouseOver.Perform();
         }
 
+   
         public void CatalogOrderAddToCart()
         {
 
@@ -68,8 +75,13 @@ namespace OrdersPageObjects
             SaveOptioninMOE.Click();
 
 
-
-
+        }
+    }
+    public class Action : IAction
+    {
+        public void Perform()
+        {
+            throw new NotImplementedException();
         }
     }
 }
