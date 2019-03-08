@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
+using System.Configuration;
 
 namespace LoginPageObjects
 {
@@ -52,7 +53,7 @@ namespace LoginPageObjects
         }
         public void LoginToApp()
         {
-            UserName.SendKeys("yuva_hm_qa");
+            UserName.SendKeys("Yuva_HM_QA");
             PassWord.SendKeys("welcome1");
             LoginButton.Click();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
@@ -60,6 +61,7 @@ namespace LoginPageObjects
             {
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
                 ProfileModalCancelOption.Click();
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             }
         }
     }

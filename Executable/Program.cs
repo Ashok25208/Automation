@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LoginTestModule;
+using OpenQA.Selenium;
 using OrdersPageObjects;
 
 namespace Executable
@@ -15,6 +16,7 @@ namespace Executable
             LoginTest Exe = new LoginTest();
             Exe.Login();
             OrdersPage Op = new OrdersPage();
+            Op.CatalogOrderpage();
             Op.CatalogOrderAddToCart();
 
         }

@@ -25,6 +25,5 @@ namespace HomePageObjects
             this.driver = driver;
             PageFactory.InitElements(driver, this);
         }
-
     }
 }
