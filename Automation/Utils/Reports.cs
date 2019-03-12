@@ -19,7 +19,7 @@ namespace Automation.Utils
         protected ExtentTest _test;
 
         ///For report directory creation and HTML report template creation
-        ///For driver instantiation
+        //For driver instantiation
         [OneTimeSetUp]
         public void BeforeClass()
         {
@@ -29,10 +29,10 @@ namespace Automation.Utils
 
                 _extent = new ExtentReports();
                 var dir = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
-                DirectoryInfo di = Directory.CreateDirectory(dir + "\\Test_Execution_Reports");
-                var htmlReporter = new ExtentHtmlReporter(dir + "\\Test_Execution_Reports" + "\\Automation_Report" + ".html");
-                _extent.AddSystemInfo("Environment", "Journey of Quality");
-                _extent.AddSystemInfo("User Name", "Sanoj");
+                DirectoryInfo di = Directory.CreateDirectory(dir + "\\Reports\\Test_Execution_Reports");
+                var htmlReporter = new ExtentHtmlReporter(dir + "\\Reports\\Test_Execution_Reports" + "\\Automation_Report" + ".html");
+                _extent.AddSystemInfo("Environment", "CheckNet");
+                _extent.AddSystemInfo("User Name", "Ashok_QA");
                 _extent.AttachReporter(htmlReporter);
             }
             catch (Exception e)
@@ -51,7 +51,7 @@ namespace Automation.Utils
             }
         }
 
-        ///Getting the name of current running test to extent report
+        //Getting the name of current running test to extent report
         [SetUp]
         public void BeforeTest()
         {

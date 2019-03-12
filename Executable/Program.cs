@@ -16,7 +16,6 @@ namespace Executable
             LoginTest Exe = new LoginTest();
             Exe.Login();
             OrdersPage Op = new OrdersPage();
-            Op.CatalogOrderpage();
             Op.CatalogOrderAddToCart();
 
         }

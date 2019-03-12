@@ -19,7 +19,7 @@ namespace LoginTestModule
         {
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            driver.Url = ConfigurationManager.AppSettings["QA"];
+            driver.Url = ConfigurationManager.AppSettings["DEV"];
             var loginPage = new LoginPage(driver);
             loginPage.LoginToApp();
 

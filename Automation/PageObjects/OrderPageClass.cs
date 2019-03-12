@@ -61,11 +61,7 @@ namespace OrdersPageObjects
         public OrdersPage()
         {
         }
-        public void CatalogOrderpage()
-        {
-
-        }
-
+        
         public void CatalogOrderAddToCart()
         {
             Actions builder = new Actions(driver);
